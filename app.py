@@ -43,13 +43,13 @@ def home():
 
 # Listar motivos de uso do remedios
 
-@app.route("/estoque/uso", methods=["GET"])
+@app.route("/estoque/motivos_uso", methods=["GET"])
 def listar_uso():
     return jsonify(uso)
 
 
 # Buscar por motivo uso do medicamento
-@app.route("/estoque/uso/<int:indice>", methods=["GET"])
+@app.route("/estoque/motivos_uso/<int:indice>", methods=["GET"])
 def busca_uso(indice):
     if indice < len(uso):
         return jsonify(uso[indice])
@@ -70,7 +70,7 @@ def add_remedio():
         return jsonify({"Valido": False, "Mensagem": "Erro ao tirar medicamento do estoque"})
 
 # Atualizar motivos de uso do medicamento
-@app.route("/estoque/uso/<int:indice>", methods=["PUT"])
+@app.route("/estoque/motivos_uso/<int:indice>", methods=["PUT"])
 def up_uso(indice):
     if indice < len(uso):
         dados = request.get_json()
@@ -85,7 +85,7 @@ def up_uso(indice):
     return jsonify({"erro": "Remédio não encontrado"}), 404
 
 # Deletar motivos de uso do medicamento
-@app.route("/estoque/uso/<int:indice>", methods=["DELETE"])
+@app.route("/estoque/motivos_uso/<int:indice>", methods=["DELETE"])
 def deletar_lista_uso(indice):
     if indice < len(uso):
         uso.pop(indice)
