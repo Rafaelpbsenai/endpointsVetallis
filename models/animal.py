@@ -1,4 +1,3 @@
-from dataclasses import fields
 from core.crud_base import Crud_base
 from core.manipular import Manipular
 

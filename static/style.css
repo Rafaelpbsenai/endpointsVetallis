@@ -20,11 +20,15 @@ html, body {
 
 header {
     position: relative;
-    height: 100vh;
+    height: auto;
     width: 100%;
     overflow: hidden;
     margin: 0;
     padding: 0;
+}
+
+#header-landingpage{
+    height: 100vh;
 }
 
 /*------------ Menu ---------- */
@@ -1122,3 +1126,136 @@ footer a:hover {
     display: inline-block;
     padding-bottom: 4px;
 }
+
+/* Base */ 
+.topbar {
+  position: fixed;
+  top: 15px;
+  left: 1%;
+  right: 1%;
+  padding: 10px 5px 10px 5px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 100;
+  justify-content: space-between !important;
+
+}
+
+.topbar-logo {
+  display: flex;
+  align-items: start !important;
+  gap: 8px;
+}
+
+.topbar-logo img {
+  width: 75px;
+  height: 52px;
+
+}
+
+.topbar-brand {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.topbar-search {
+  flex: 4;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 6px 12px;
+  max-width: 400px;
+}
+
+.topbar-search i {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+}
+
+.topbar-search input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Inter', sans-serif;
+
+}
+
+.topbar-search input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.topbar-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.topbar-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  padding: 6px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.topbar-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.topbar-btn-icon {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  justify-content: center;
+}
+
+.sidebar {
+  position: fixed;
+  top: 90px;
+  left: 25px;
+  width: 80px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 17px;
+}
+
+.sidebar-link {
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 255, 255, 0.15);
+  width: 60px;
+  height: 60px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  margin-top: 8px;
+}
+
+.sidebar-link:hover {
+  background: rgba(236, 221, 221, 0.25);
+  color: #fff;
+}
+
